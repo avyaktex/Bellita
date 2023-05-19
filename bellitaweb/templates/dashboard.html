@@ -1,0 +1,265 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Bellita : The Salon</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="/static/img/logo1.png">
+		<!-- CSS here -->
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/animate.min.css">
+        <link rel="stylesheet" href="/static/css/magnific-popup.css">
+        <link rel="stylesheet" href="/static/fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="/static/css/dripicons.css">
+        <link rel="stylesheet" href="/static/css/slick.css">
+        <link rel="stylesheet" href="/static/css/meanmenu.css">
+        <link rel="stylesheet" href="/static/css/default.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="/static/css/responsive.css">
+        
+
+<style>
+    .appointment-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .appointment-table th,
+    .appointment-table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+
+    .appointment-table th {
+        background-color: #f2f2f2;
+        border-top: 1px solid #ddd;
+    }
+
+    .appointment-table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .appointment-table tbody td:last-child {
+        border-right: none;
+    }
+</style>
+    </head>
+    <body>               
+<!-- header -->
+<header class="header-area header-three">  
+    <div id="header-sticky" class="menu-area">
+        <div class="container">
+            <div class="second-menu">
+                <div class="row align-items-center">
+                    <div class="col-xl-2 col-lg-2">
+                        <div class="logo">
+                            <a href="/index"><img src="/static/img/logo/logo.png" alt="logo"></a>
+                        </div>
+                    </div>  
+                     <div class="col-xl-3 col-lg-3 text-right d-none d-lg-block mt-25 mb-25 text-right text-xl-right">
+                        <div class="login">
+                            <ul>
+                                <li>
+                                    <div class="second-header-btn">
+                                      <form action="{% url 'logout' %}" method="POST">
+                                      {% csrf_token %}
+                                      <button type ="submit" class="btn">Logout</button>
+                                      </form>
+                                    </div>
+                                </li>
+                            </ul>
+                        
+                        </div>
+                       
+                    </div>
+                    
+                        <div class="col-12">
+                            <div class="mobile-menu"></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- header-end --> 
+<!-- booking-area -->
+<br>
+<br>
+           <section id="booking" class="booking-area p-relative pt-120 pb-120" style="background: url(/static/img/bg/ap-bg.png); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+            <div class="container">
+                <form method="GET" action="{% url 'dashboard' %}">
+                    <input type="text" name="input_name" placeholder="Search by Name" value="{{ request.GET.input_name }}">
+                    <input type="date" name="start_date" placeholder="Start Date" value="{{ request.GET.start_date }}" required>
+                    <input type="date" name="end_date" placeholder="End Date" value="{{ request.GET.end_date }}" required>
+                    {% comment %} <input type="text" name="delete" placeholder="Delete" value="{{ request.GET.delete }}"> {% endcomment %}
+                    <button type="submit" class="btn">Search</button>
+                </form>
+            </div>
+<br>
+<div class="container">
+    <div class="contact-field p-relative c-subject mb-20">
+<table class="appointment-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Mobile Number</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for appointment in appointments %}
+        <tr>
+            <td>{{ appointment.input_name }}</td>
+            <td>{{ appointment.mobile_number }}</td>
+            <td>{{ appointment.date }}</td>
+            <td>{{ appointment.time }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+</div>
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current-page">{{ page_obj.number }}</span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>    
+</div>
+</section>
+
+
+<!-- booking-area-end -->
+<!-- footer -->
+<footer class="footer-bg footer-p pt-90" style="background-color: #252525; background-image: url(/static/img/bg/footer-bg.png);">
+<div class="footer-top">
+<div class="container">
+<div class="row justify-content-between">
+
+<div class="col-xl-4 col-lg-4 col-sm-6">
+<div class="footer-widget mb-30">
+    <!-- <div class="f-widget-title mb-40"> -->
+    <div class="logo">
+      <a href="index"><img src="/static/img/logo/logo1.png" alt="logo" width="100%"></a>
+    </div>
+    <div class="footer-social mt-10">
+    <p>Have a look on our social media accounts... </p>
+    <a href="https://www.facebook.com/Bellitathesalon/"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/pradeep_bellita_the_salon/"><i class="fab fa-instagram"></i></a>
+    <a href="https://mail.google.com/mail/u/0/?fs=1&to=bellitathesalon@gmail.com&tf=cm"><i class="fa fa-envelope"></i></a>    
+    </div> 
+    <div class="footer-link">
+        <p></p>
+    </div>
+</div>
+</div>
+
+<div class="col-xl-2 col-lg-2 col-sm-6">
+<div class="footer-widget mb-30">
+    <div class="f-widget-title">
+        <h2>Our Services</h2>
+    </div>
+    <div class="footer-link">
+        <ul>                                        
+            <li><a href="/services">Facials</a></li>
+            <li><a href="/services">Bridal Makeup</a></li>
+            <li><a href="/services">Hair Cut</a></li>
+            <li><a href="/services">Balayage</a></li>
+            <li><a href="/services">Styling</a></li>
+            <li><a href="/services">Texture</a></li>
+        </ul>
+    </div>
+</div>
+</div>  
+<div class="col-xl-2 col-lg-2 col-sm-6">
+<div class="footer-widget mb-30">
+    <div class="f-widget-title">
+        <h2>Other Links</h2>
+    </div>
+    <div class="footer-link">
+        <ul>
+            <li><a href="/index"> Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/appointment">Book Now</a></li>
+        </ul>
+    </div>
+</div>
+</div>  
+</div>
+</div>
+<div class="row align-items-center copyright-wrap">
+<div class="col-lg-6">
+<div class="copy-text">
+     Copyright &copy; 2023 <a href="index">Bellita</a>. All rights reserved.       
+</div>
+</div>
+<div class="col-lg-6">
+<div class="copay-contact">                                    
+       <ul>
+            <li>
+                    <div class="c-contact">
+                        <div class="icon">
+                            <img src="/static/img/icon/ft-icon01.png" alt="logo">
+                        </div>
+                        <div class="text">
+                            <strong>Everyday:</strong>
+                            <p>09:00 AM - 09:00 PM</p>
+                        </div>
+                    </div>
+            </li>
+           <li>
+                <div class="c-contact">   
+                    <div class="icon">
+                         <img src="/static/img/icon/ft-icon03.png" alt="img">
+                    </div>
+                    <div class="text">
+                        <h3>Call Now:</h3>
+                        <span>+91 9904455668</span>
+                    </div>
+
+                </div>
+           </li>
+        </ul>
+    </div>    
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- footer-end -->
+<!-- JS here -->
+<script src="/static/js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="/static/js/vendor/jquery-3.6.0.min.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/slick.min.js"></script>
+<script src="/static/js/ajax-form.js"></script>
+<script src="/static/js/paroller.js"></script>
+<script src="/static/js/wow.min.js"></script>
+<script src="/static/js/js_isotope.pkgd.min.js"></script>
+<script src="/static/js/imagesloaded.min.js"></script>
+<script src="/static/js/parallax.min.js"></script>
+<script src="/static/js/jquery.waypoints.min.js"></script>
+<script src="/static/js/jquery.counterup.min.js"></script>
+<script src="/static/js/jquery.scrollUp.min.js"></script>
+<script src="/static/js/jquery.meanmenu.min.js"></script>
+<script src="/static/js/parallax-scroll.js"></script>
+<script src="/static/js/jquery.magnific-popup.min.js"></script>
+<script src="/static/js/element-in-view.js"></script>
+<script src="/static/js/main.js"></script>
+</body>
+</html>
+
