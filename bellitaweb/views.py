@@ -3,7 +3,12 @@ from .models import Form
 from django.shortcuts import render
 from django.db.models import Q
 from django.core.paginator import Paginator
-
+from django.template.loader import render_to_string
+from premailer import Premailer
+from django.core.mail import EmailMessage
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import smtplib
 
 # Create your views here.
 @login_required
@@ -20,6 +25,26 @@ def success(request):
     }
     return render(request, 'success.html', context)
 
+
+def send_email(subject, html_body, sender, recipients, smtp_server, smtp_port, username, password):
+    # Create a multipart message
+    message = MIMEMultipart()
+    message["Subject"] = subject
+    message["From"] = sender
+    message["To"] = ', '.join(recipients)
+
+    # Add the body of the email as HTML
+    message.attach(MIMEText(html_body, "html"))
+
+    # Connect to the SMTP server
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+        server.starttls()
+        server.login(username, password)
+
+        # Send the email
+        server.send_message(message)
+
+
 def appointment(request):
     if request.method == 'POST':
         input_name = request.POST.get('input_name')
@@ -29,14 +54,28 @@ def appointment(request):
         form_data = Form(input_name=input_name, mobile_number=mobile_number, date=date, email=email)
         form_data.save()
         appointments = Form.objects.latest('id')
+        subject = "You have received a new appointment..."
+        sender = "avyaktex@gmail.com"
+        recipients = ["dhrumilsheth1512@gmail.com", email]
+        smtp_server = "smtp.gmail.com"
+        smtp_port = 587
+        username = "avyaktex@gmail.com"
+        password = "lcxkeugwmogaactc"
+
+        # Render the HTML template with the provided context data
+        html_content = render_to_string('success.html', {'appointment': form_data})
+
+        # Send the email
+        send_email(subject, html_content, sender, recipients, smtp_server, smtp_port, username, password)
+
         context = {
+            'appointment': form_data,
             'appointment' : appointments,
         }
         return render(request, 'success.html', context)
     else:
         return render(request, 'appointment.html')
-
-
+    
 def dashboard(request):
     search_name = request.GET.get('input_name')
     start_date = request.GET.get('start_date')
@@ -83,6 +122,7 @@ def dashboard(request):
         'search_name': search_name,
         'start_date': start_date,
         'end_date': end_date
+        
     }
 
     return render(request, 'dashboard.html', context)
