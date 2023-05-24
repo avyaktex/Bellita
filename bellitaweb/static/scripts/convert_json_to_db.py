@@ -9,12 +9,12 @@ def convert_json_to_database(json_file_path, db_file_path, table_name):
     conn = sqlite3.connect(db_file_path)
     cursor = conn.cursor()
     for item in json_data:
-        cursor.execute(f"INSERT INTO {table_name} (ser_id, ser_name, ser_duration, ser_price) VALUES (?, ?, ?, ?)",
-                       (item['serId'], item['serName'], item['serDuration'], item['serPrice']))
+        cursor.execute(f"INSERT INTO {table_name} (name, price, service_time, gender, category) VALUES (?, ?, ?, ?, ?)",
+                       (item['Name'], item['Price'], item['Service time'], item['Gender'], item['Category']))
     conn.commit()
     conn.close()
 
-db_file_path = "D:\\Bellita\\Bellitathesalon\\BellitaSalon\\db.sqlite3"
-json_file_path = "D:\\Bellita\\Bellitathesalon\\BellitaSalon\\bellitaweb\\static\\json\\services.json"
-table_name = 'bellitaweb_service'
+db_file_path = "D:\\Avyakt\\Bellita\\db.sqlite3"
+json_file_path = "D:\\Avyakt\\Bellita\\bellitaweb\\static\\json\\services_by_category.json"
+table_name = 'bellitaweb_services_by_cat'
 convert_json_to_database(json_file_path,db_file_path,table_name)

@@ -1,0 +1,1528 @@
+[
+ {
+  "Name": "Anti-Dandruff",
+  "Price": 1500,
+  "Service time": "45 Mins",
+  "Gender": "Men",
+  "Category": "Scalp"
+ },
+ {
+  "Name": "Anti-Hairfall",
+  "Price": 1500,
+  "Service time": "45 Mins",
+  "Gender": "Men",
+  "Category": "Scalp"
+ },
+ {
+  "Name": "Beard color inoa",
+  "Price": 500,
+  "Service time": "25 Mins",
+  "Gender": "Men",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Beard color majirel",
+  "Price": 450,
+  "Service time": "25 Mins",
+  "Gender": "Men",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Beard craft",
+  "Price": 150,
+  "Service time": "25 Mins",
+  "Gender": "Men",
+  "Category": "Hair"
+ },
+ {
+  "Name": "Black mask",
+  "Price": 900,
+  "Service time": "20 Mins",
+  "Gender": "Men",
+  "Category": "Mask"
+ },
+ {
+  "Name": "Bond strengthening",
+  "Price": 900,
+  "Service time": "45 Mins",
+  "Gender": "Men",
+  "Category": "Hair Treatments For Men"
+ },
+ {
+  "Name": "Clean shave",
+  "Price": 100,
+  "Service time": "20 Mins",
+  "Gender": "Men",
+  "Category": "Hair"
+ },
+ {
+  "Name": "Collagene mask",
+  "Price": 1100,
+  "Service time": "20 Mins",
+  "Gender": "Men",
+  "Category": "Mask"
+ },
+ {
+  "Name": "Color sealer",
+  "Price": 700,
+  "Service time": "45 Mins",
+  "Gender": "Men",
+  "Category": "Care"
+ },
+ {
+  "Name": "Color streak inoa",
+  "Price": 400,
+  "Service time": "40 Mins",
+  "Gender": "Men",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Color streak majirel",
+  "Price": 350,
+  "Service time": "40 Mins",
+  "Gender": "Men",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "D tan face and neck",
+  "Price": 450,
+  "Service time": "20 Mins",
+  "Gender": "Men",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan feet\/back of palms",
+  "Price": 200,
+  "Service time": "15 Mins",
+  "Gender": "Men",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan full arms",
+  "Price": 600,
+  "Service time": "20 Mins",
+  "Gender": "Men",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan full back",
+  "Price": 550,
+  "Service time": "30 Mins",
+  "Gender": "Men",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan full body",
+  "Price": 2400,
+  "Service time": "90 Mins",
+  "Gender": "Men",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan full legs",
+  "Price": 700,
+  "Service time": "40 Mins",
+  "Gender": "Men",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan half arms",
+  "Price": 450,
+  "Service time": "15 Mins",
+  "Gender": "Men",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan half back",
+  "Price": 450,
+  "Service time": "20 Mins",
+  "Gender": "Men",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan half legs",
+  "Price": 500,
+  "Service time": "20 Mins",
+  "Gender": "Men",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan stomach",
+  "Price": 500,
+  "Service time": "20 Mins",
+  "Gender": "Men",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "Deep conditioning",
+  "Price": 900,
+  "Service time": "45 Mins",
+  "Gender": "Men",
+  "Category": "Hair Treatments For Men"
+ },
+ {
+  "Name": "Deep hydrating radiant advance facial",
+  "Price": 4500,
+  "Service time": "90 Mins",
+  "Gender": "Men",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Deep hydrating enhance classic facial",
+  "Price": 3500,
+  "Service time": "60 Mins",
+  "Gender": "Men",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Deep hydrating enhancing advance facial",
+  "Price": 6000,
+  "Service time": "90 Mins",
+  "Gender": "Men",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Deep hydrating radiant classic facial",
+  "Price": 2500,
+  "Service time": "60 Mins",
+  "Gender": "Men",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Deep hydrating re-storing clean up",
+  "Price": 1000,
+  "Service time": "45 Mins",
+  "Gender": "Men",
+  "Category": "Clean up"
+ },
+ {
+  "Name": "Deep nourishing",
+  "Price": 700,
+  "Service time": "45 Mins",
+  "Gender": "Men",
+  "Category": "Hair Treatments For Men"
+ },
+ {
+  "Name": "Detoxification clean up",
+  "Price": 1000,
+  "Service time": "30 Mins",
+  "Gender": "Men",
+  "Category": "Clean up"
+ },
+ {
+  "Name": "Dia colour",
+  "Price": 900,
+  "Service time": "45 Mins",
+  "Gender": "Men",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Feel youth clean up",
+  "Price": 1000,
+  "Service time": "30 Mins",
+  "Gender": "Men",
+  "Category": "Clean up"
+ },
+ {
+  "Name": "Friz control",
+  "Price": 700,
+  "Service time": "45 Mins",
+  "Gender": "Men",
+  "Category": "Hair Treatments For Men"
+ },
+ {
+  "Name": "Global color inoa",
+  "Price": 1000,
+  "Service time": "45 Mins",
+  "Gender": "Men",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Global color majirel",
+  "Price": 900,
+  "Service time": "45 Mins",
+  "Gender": "Men",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Hair cut",
+  "Price": 250,
+  "Service time": "35 Mins",
+  "Gender": "Men",
+  "Category": "Hair"
+ },
+ {
+  "Name": "Hair style",
+  "Price": 200,
+  "Service time": "15 Mins",
+  "Gender": "Men",
+  "Category": "Hair"
+ },
+ {
+  "Name": "Head massage",
+  "Price": 300,
+  "Service time": "30 Mins",
+  "Gender": "Men",
+  "Category": "Head Massage"
+ },
+ {
+  "Name": "Head massage with wash",
+  "Price": 400,
+  "Service time": "35 Mins",
+  "Gender": "Men",
+  "Category": "Head Massage"
+ },
+ {
+  "Name": "Highlights inoa",
+  "Price": 1200,
+  "Service time": "40 Mins",
+  "Gender": "Men",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Highlights majirel",
+  "Price": 1100,
+  "Service time": "40 Mins",
+  "Gender": "Men",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Hydra collagene facial advance facial",
+  "Price": 5000,
+  "Service time": "90 Mins",
+  "Gender": "Men",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Hydrating\/Purifying",
+  "Price": 700,
+  "Service time": "45 Mins",
+  "Gender": "Men",
+  "Category": "Hair Treatments For Men"
+ },
+ {
+  "Name": "Junior hair cut",
+  "Price": 200,
+  "Service time": "35 Mins",
+  "Gender": "Men",
+  "Category": "Hair"
+ },
+ {
+  "Name": "Kanpeki clean up",
+  "Price": 1200,
+  "Service time": "45 Mins",
+  "Gender": "Men",
+  "Category": "Clean up"
+ },
+ {
+  "Name": "Keratin wash",
+  "Price": 200,
+  "Service time": "20 Mins",
+  "Gender": "Men",
+  "Category": "Hair Wash"
+ },
+ {
+  "Name": "Loreal wash",
+  "Price": 100,
+  "Service time": "20 Mins",
+  "Gender": "Men",
+  "Category": "Hair Wash"
+ },
+ {
+  "Name": "Oleo shape",
+  "Price": 3000,
+  "Service time": "150 Mins",
+  "Gender": "Men",
+  "Category": "Texture Service"
+ },
+ {
+  "Name": "Power mask",
+  "Price": 700,
+  "Service time": "20 Mins",
+  "Gender": "Men",
+  "Category": "Mask"
+ },
+ {
+  "Name": "Pre-lightening streak",
+  "Price": 350,
+  "Service time": "30 Mins",
+  "Gender": "Men",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Pre-lightning global",
+  "Price": 700,
+  "Service time": "35 Mins",
+  "Gender": "Men",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Protein treatment",
+  "Price": 3000,
+  "Service time": "90 Mins",
+  "Gender": "Men",
+  "Category": "Texture Service"
+ },
+ {
+  "Name": "Purifying",
+  "Price": 1500,
+  "Service time": "45 Mins",
+  "Gender": "Men",
+  "Category": "Scalp"
+ },
+ {
+  "Name": "Purifying advanc facial",
+  "Price": 3500,
+  "Service time": "90 Mins",
+  "Gender": "Men",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Purifying classic facial",
+  "Price": 2000,
+  "Service time": "60 Mins",
+  "Gender": "Men",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Seaweed advance facial",
+  "Price": 3000,
+  "Service time": "90 Mins",
+  "Gender": "Men",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Seaweed classic facial",
+  "Price": 1800,
+  "Service time": "60 Mins",
+  "Gender": "Men",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Sensi minerals",
+  "Price": 1000,
+  "Service time": "45 Mins",
+  "Gender": "Men",
+  "Category": "Clean up"
+ },
+ {
+  "Name": "Sensi oxygenating advance facial",
+  "Price": 4000,
+  "Service time": "90 Mins",
+  "Gender": "Men",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Sensi oxygenating classic facial",
+  "Price": 2000,
+  "Service time": "60 Mins",
+  "Gender": "Men",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Sensiglow classic facial",
+  "Price": 1500,
+  "Service time": "60 Mins",
+  "Gender": "Men",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Shahnaz gold facial",
+  "Price": 2200,
+  "Service time": "60 Mins",
+  "Gender": "Men",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Shine effect",
+  "Price": 700,
+  "Service time": "30 Mins",
+  "Gender": "Men",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Sidelock and moustache inoa",
+  "Price": 350,
+  "Service time": "20 Mins",
+  "Gender": "Men",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Sidelock and moustache majirel",
+  "Price": 300,
+  "Service time": "20 Mins",
+  "Gender": "Men",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Skin brightening clean up",
+  "Price": 1000,
+  "Service time": "30 Mins",
+  "Gender": "Men",
+  "Category": "Clean up"
+ },
+ {
+  "Name": "Soothing",
+  "Price": 1500,
+  "Service time": "45 Mins",
+  "Gender": "Men",
+  "Category": "Scalp"
+ },
+ {
+  "Name": "Vitamin-c advance facial",
+  "Price": 4000,
+  "Service time": "90 Mins",
+  "Gender": "Men",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Vitamin-c classic facial",
+  "Price": 2000,
+  "Service time": "60 Mins",
+  "Gender": "Men",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Whitening classic facial",
+  "Price": 1300,
+  "Service time": "60 Mins",
+  "Gender": "Men",
+  "Category": "Facial"
+ },
+ {
+  "Name": "2d make up and hair style",
+  "Price": 3500,
+  "Service time": "120 Mins",
+  "Gender": "Women",
+  "Category": "Make up"
+ },
+ {
+  "Name": "Balayage Long length",
+  "Price": 4500,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Balayage Medium length",
+  "Price": 4000,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Balayage Short length",
+  "Price": 3500,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Bikini",
+  "Price": 1300,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Bikini line",
+  "Price": 250,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Black mask",
+  "Price": 900,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Mask"
+ },
+ {
+  "Name": "Bleach face and neck",
+  "Price": 350,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Bleach\/Shiner"
+ },
+ {
+  "Name": "Bleach feet\/back of palms",
+  "Price": 150,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "Bleach\/Shiner"
+ },
+ {
+  "Name": "Bleach full arms",
+  "Price": 500,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Bleach\/Shiner"
+ },
+ {
+  "Name": "Bleach full back",
+  "Price": 450,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Bleach\/Shiner"
+ },
+ {
+  "Name": "Bleach full body",
+  "Price": 1900,
+  "Service time": "70 Mins",
+  "Gender": "Women",
+  "Category": "Bleach\/Shiner"
+ },
+ {
+  "Name": "Bleach full legs",
+  "Price": 600,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Bleach\/Shiner"
+ },
+ {
+  "Name": "Bleach half arms",
+  "Price": 350,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Bleach\/Shiner"
+ },
+ {
+  "Name": "Bleach half back",
+  "Price": 350,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Bleach\/Shiner"
+ },
+ {
+  "Name": "Bleach half legs",
+  "Price": 350,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Bleach\/Shiner"
+ },
+ {
+  "Name": "Bleach stomach",
+  "Price": 350,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Bleach\/Shiner"
+ },
+ {
+  "Name": "Blow dry",
+  "Price": 500,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Styling"
+ },
+ {
+  "Name": "Botox long length",
+  "Price": 8500,
+  "Service time": "210 Mins",
+  "Gender": "Women",
+  "Category": "Texture Treatment"
+ },
+ {
+  "Name": "Botox medium length",
+  "Price": 7000,
+  "Service time": "210 Mins",
+  "Gender": "Women",
+  "Category": "Texture Treatment"
+ },
+ {
+  "Name": "Botox short length",
+  "Price": 5000,
+  "Service time": "210 Mins",
+  "Gender": "Women",
+  "Category": "Texture Treatment"
+ },
+ {
+  "Name": "Bridal make up",
+  "Price": 12000,
+  "Service time": "180 Mins",
+  "Gender": "Women",
+  "Category": "Make up"
+ },
+ {
+  "Name": "Chin",
+  "Price": 40,
+  "Service time": "10 Mins",
+  "Gender": "Women",
+  "Category": "Threading"
+ },
+ {
+  "Name": "Chin(wax)",
+  "Price": 60,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Collagene mask",
+  "Price": 1100,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Mask"
+ },
+ {
+  "Name": "Color gloss long length",
+  "Price": 2000,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Color gloss medium length",
+  "Price": 1500,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Color gloss short length",
+  "Price": 1000,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Curls long length",
+  "Price": 800,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Styling"
+ },
+ {
+  "Name": "Curls medium length",
+  "Price": 650,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Styling"
+ },
+ {
+  "Name": "Curls short length",
+  "Price": 500,
+  "Service time": "35 Mins",
+  "Gender": "Women",
+  "Category": "Styling"
+ },
+ {
+  "Name": "D tan face and neck",
+  "Price": 450,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan feet\/back of palms",
+  "Price": 200,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan full arms",
+  "Price": 600,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan full back",
+  "Price": 550,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan full body",
+  "Price": 2400,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan full legs",
+  "Price": 700,
+  "Service time": "40 Mins",
+  "Gender": "Women",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan half arms",
+  "Price": 450,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan half back",
+  "Price": 450,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan half legs",
+  "Price": 500,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "D tan stomach",
+  "Price": 500,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "D-tan"
+ },
+ {
+  "Name": "Deep hydrating radiant advance facial",
+  "Price": 4500,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Deep hydrating enhance classic facial",
+  "Price": 3500,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Deep hydrating enhancing advance facial",
+  "Price": 6000,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Deep hydrating radiant classic facial",
+  "Price": 2500,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Deep hydrating re-storing clean up",
+  "Price": 1000,
+  "Service time": "45 Mins",
+  "Gender": "Women",
+  "Category": "Clean up"
+ },
+ {
+  "Name": "Detoxification clean up",
+  "Price": 1000,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Clean up"
+ },
+ {
+  "Name": "Dia root touch up",
+  "Price": 900,
+  "Service time": "50 Mins",
+  "Gender": "Women",
+  "Category": "Root Touch Up"
+ },
+ {
+  "Name": "Engagement make up",
+  "Price": 5000,
+  "Service time": "150 Mins",
+  "Gender": "Women",
+  "Category": "Make up"
+ },
+ {
+  "Name": "Eyebrow",
+  "Price": 50,
+  "Service time": "10 Mins",
+  "Gender": "Women",
+  "Category": "Threading"
+ },
+ {
+  "Name": "Feel youth clean up",
+  "Price": 1000,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Clean up"
+ },
+ {
+  "Name": "Forehead",
+  "Price": 40,
+  "Service time": "10 Mins",
+  "Gender": "Women",
+  "Category": "Threading"
+ },
+ {
+  "Name": "Full arms",
+  "Price": 500,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Full arms roll on",
+  "Price": 600,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Waxing Roll On"
+ },
+ {
+  "Name": "Full back",
+  "Price": 550,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Full back roll on",
+  "Price": 600,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Waxing Roll On"
+ },
+ {
+  "Name": "Full body",
+  "Price": 2550,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Full body(no bikini line\/bikini)",
+  "Price": 2250,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Full face",
+  "Price": 200,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Threading"
+ },
+ {
+  "Name": "Full face(wax)",
+  "Price": 350,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Full front",
+  "Price": 550,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Full front roll on",
+  "Price": 600,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Waxing Roll On"
+ },
+ {
+  "Name": "Full legs",
+  "Price": 500,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Full legs roll on",
+  "Price": 600,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Waxing Roll On"
+ },
+ {
+  "Name": "Girl hair cut (upto 10 years)",
+  "Price": 400,
+  "Service time": "35 Mins",
+  "Gender": "Women",
+  "Category": "Hair"
+ },
+ {
+  "Name": "Hair spa Long length",
+  "Price": 1800,
+  "Service time": "45 Mins",
+  "Gender": "Women",
+  "Category": "Hair Treatments For Women"
+ },
+ {
+  "Name": "Hair spa Medium length",
+  "Price": 1400,
+  "Service time": "45 Mins",
+  "Gender": "Women",
+  "Category": "Hair Treatments For Women"
+ },
+ {
+  "Name": "Hair spa Short length",
+  "Price": 1000,
+  "Service time": "45 Mins",
+  "Gender": "Women",
+  "Category": "Hair Treatments For Women"
+ },
+ {
+  "Name": "Half arms",
+  "Price": 300,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Half arms roll on",
+  "Price": 350,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "Waxing Roll On"
+ },
+ {
+  "Name": "Half back",
+  "Price": 350,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Half back roll on",
+  "Price": 500,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "Waxing Roll On"
+ },
+ {
+  "Name": "Half legs",
+  "Price": 350,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Half legs roll on",
+  "Price": 450,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Waxing Roll On"
+ },
+ {
+  "Name": "HD make up nd hair style",
+  "Price": 4500,
+  "Service time": "150 Mins",
+  "Gender": "Women",
+  "Category": "Make up"
+ },
+ {
+  "Name": "Highlight Long length",
+  "Price": 4000,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Highlight Medium length",
+  "Price": 3500,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Highlight Short length",
+  "Price": 3000,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Hydra collagene facial advance facial",
+  "Price": 5000,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Inoa global Long length",
+  "Price": 3700,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Inoa global Medium length",
+  "Price": 3200,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Inoa global Short length",
+  "Price": 2700,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Inoa root touch up(2 inch)",
+  "Price": 1000,
+  "Service time": "50 Mins",
+  "Gender": "Women",
+  "Category": "Root Touch Up"
+ },
+ {
+  "Name": "Iron Long length",
+  "Price": 800,
+  "Service time": "35 Mins",
+  "Gender": "Women",
+  "Category": "Styling"
+ },
+ {
+  "Name": "Iron Medium length",
+  "Price": 650,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Styling"
+ },
+ {
+  "Name": "Iron Short length",
+  "Price": 500,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Styling"
+ },
+ {
+  "Name": "Jawline",
+  "Price": 40,
+  "Service time": "10 Mins",
+  "Gender": "Women",
+  "Category": "Threading"
+ },
+ {
+  "Name": "Jawline(wax)",
+  "Price": 60,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Kanpeki clean up",
+  "Price": 1200,
+  "Service time": "45 Mins",
+  "Gender": "Women",
+  "Category": "Clean up"
+ },
+ {
+  "Name": "Keratin long length",
+  "Price": 7500,
+  "Service time": "210 Mins",
+  "Gender": "Women",
+  "Category": "Protein Treatment"
+ },
+ {
+  "Name": "Keratin medium length",
+  "Price": 6000,
+  "Service time": "180 Mins",
+  "Gender": "Women",
+  "Category": "Protein Treatment"
+ },
+ {
+  "Name": "Keratin short length",
+  "Price": 4000,
+  "Service time": "180 Mins",
+  "Gender": "Women",
+  "Category": "Protein Treatment"
+ },
+ {
+  "Name": "Keratin spa Medium length",
+  "Price": 1800,
+  "Service time": "50 Mins",
+  "Gender": "Women",
+  "Category": "Hair Treatments For Women"
+ },
+ {
+  "Name": "Keratin spa Short length",
+  "Price": 1500,
+  "Service time": "45 Mins",
+  "Gender": "Women",
+  "Category": "Hair Treatments For Women"
+ },
+ {
+  "Name": "Keratin spa- Long length",
+  "Price": 2000,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Hair Treatments For Women"
+ },
+ {
+  "Name": "Keratin wash(blow dry)",
+  "Price": 450,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Hair Wash"
+ },
+ {
+  "Name": "Loreal wash (blast dry)",
+  "Price": 400,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Hair Wash"
+ },
+ {
+  "Name": "Majirel global Long length",
+  "Price": 3500,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Majirel global Medium length",
+  "Price": 3000,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Majirel global Short length",
+  "Price": 2500,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Majirel root touch up(2 inch)",
+  "Price": 900,
+  "Service time": "50 Mins",
+  "Gender": "Women",
+  "Category": "Root Touch Up"
+ },
+ {
+  "Name": "Metal-DX",
+  "Price": 1000,
+  "Service time": "45 Mins",
+  "Gender": "Women",
+  "Category": "Advanced Treatments"
+ },
+ {
+  "Name": "Nanoplastia long length",
+  "Price": 9000,
+  "Service time": "210 Mins",
+  "Gender": "Women",
+  "Category": "Protein Treatment"
+ },
+ {
+  "Name": "Nanoplastia medium length",
+  "Price": 7500,
+  "Service time": "210 Mins",
+  "Gender": "Women",
+  "Category": "Protein Treatment"
+ },
+ {
+  "Name": "Nanoplastia short length",
+  "Price": 6000,
+  "Service time": "210 Mins",
+  "Gender": "Women",
+  "Category": "Protein Treatment"
+ },
+ {
+  "Name": "Neck",
+  "Price": 50,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "Threading"
+ },
+ {
+  "Name": "Neck(wax)",
+  "Price": 120,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Oleoshape long length",
+  "Price": 8500,
+  "Service time": "210 Mins",
+  "Gender": "Women",
+  "Category": "Texture Treatment"
+ },
+ {
+  "Name": "Oleoshape medium length",
+  "Price": 7000,
+  "Service time": "210 Mins",
+  "Gender": "Women",
+  "Category": "Texture Treatment"
+ },
+ {
+  "Name": "Oleoshape short length",
+  "Price": 5000,
+  "Service time": "180 Mins",
+  "Gender": "Women",
+  "Category": "Texture Treatment"
+ },
+ {
+  "Name": "Power mask",
+  "Price": 700,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Mask"
+ },
+ {
+  "Name": "Pre-lightening Long length",
+  "Price": 2000,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Pre-lightening Medium length",
+  "Price": 1500,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Pre-lightening Short length",
+  "Price": 1000,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Purifying advanc facial",
+  "Price": 3500,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Purifying classic facial",
+  "Price": 2000,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Reception make up",
+  "Price": 8000,
+  "Service time": "180 Mins",
+  "Gender": "Women",
+  "Category": "Make up"
+ },
+ {
+  "Name": "Saree drapping",
+  "Price": 500,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Make up"
+ },
+ {
+  "Name": "Scalp advance",
+  "Price": 1800,
+  "Service time": "45 Mins",
+  "Gender": "Women",
+  "Category": "Scalp"
+ },
+ {
+  "Name": "Seaweed advance facial",
+  "Price": 3000,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Seaweed classic facial",
+  "Price": 1800,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Sensi minerals",
+  "Price": 1000,
+  "Service time": "45 Mins",
+  "Gender": "Women",
+  "Category": "Clean up"
+ },
+ {
+  "Name": "Sensi oxygenating advance facial",
+  "Price": 4000,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Sensi oxygenating classic facial",
+  "Price": 2000,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Sensiglow classic facial",
+  "Price": 1500,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Shahnaz gold facial",
+  "Price": 2200,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Shine effect long length",
+  "Price": 2000,
+  "Service time": "45 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Shine effect medium length",
+  "Price": 1500,
+  "Service time": "45 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Shine effect short length",
+  "Price": 1000,
+  "Service time": "45 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Side lock(wax)",
+  "Price": 60,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Sidelock",
+  "Price": 40,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "Threading"
+ },
+ {
+  "Name": "Simple make up and hair style",
+  "Price": 2500,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "Make up"
+ },
+ {
+  "Name": "Skin brightening clean up",
+  "Price": 1000,
+  "Service time": "30 Mins",
+  "Gender": "Women",
+  "Category": "Clean up"
+ },
+ {
+  "Name": "Stomach\/half front",
+  "Price": 450,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Stomach\/half front roll on",
+  "Price": 550,
+  "Service time": "20 Mins",
+  "Gender": "Women",
+  "Category": "Waxing Roll On"
+ },
+ {
+  "Name": "Streak inoa",
+  "Price": 600,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Streak majirel",
+  "Price": 500,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Hair Color"
+ },
+ {
+  "Name": "Underarms",
+  "Price": 150,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Underarms roll on",
+  "Price": 200,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "Waxing Roll On"
+ },
+ {
+  "Name": "Upperlips",
+  "Price": 40,
+  "Service time": "10 Mins",
+  "Gender": "Women",
+  "Category": "Threading"
+ },
+ {
+  "Name": "Upperlips(wax)",
+  "Price": 60,
+  "Service time": "15 Mins",
+  "Gender": "Women",
+  "Category": "Waxing"
+ },
+ {
+  "Name": "Vitamin-c advance facial",
+  "Price": 4000,
+  "Service time": "90 Mins",
+  "Gender": "Women",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Vitamin-c classic facial",
+  "Price": 2000,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Whitening classic facial",
+  "Price": 1300,
+  "Service time": "60 Mins",
+  "Gender": "Women",
+  "Category": "Facial"
+ },
+ {
+  "Name": "Women hair cut",
+  "Price": 500,
+  "Service time": "35 Mins",
+  "Gender": "Women",
+  "Category": "Hair"
+ },
+ {
+  "Name": "Women hair cut with wash",
+  "Price": 600,
+  "Service time": "45 Mins",
+  "Gender": "Women",
+  "Category": "Hair"
+ },
+ {
+  "Name": "Women head massage",
+  "Price": 500,
+  "Service time": "35 Mins",
+  "Gender": "Women",
+  "Category": "Head Massage"
+ },
+ {
+  "Name": "Women head massage with wash",
+  "Price": 650,
+  "Service time": "45 Mins",
+  "Gender": "Women",
+  "Category": "Head Massage"
+ }
+]
