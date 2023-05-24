@@ -1,14 +1,14 @@
 from django.contrib.auth.decorators import login_required
-from .models import Form
+from .models import Form, Services_by_cat
 from django.shortcuts import render
 from django.db.models import Q
 from django.core.paginator import Paginator
-from django.template.loader import render_to_string
-from premailer import Premailer
-from django.core.mail import EmailMessage
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-import smtplib
+# from django.template.loader import render_to_string
+# from premailer import Premailer
+# from django.core.mail import EmailMessage
+# from email.mime.multipart import MIMEMultipart
+# from email.mime.text import MIMEText
+# import smtplib
 
 # Create your views here.
 @login_required
@@ -26,26 +26,30 @@ def success(request):
     return render(request, 'success.html', context)
 
 
-def send_email(subject, html_body, sender, recipients, smtp_server, smtp_port, username, password):
-    # Create a multipart message
-    message = MIMEMultipart()
-    message["Subject"] = subject
-    message["From"] = sender
-    message["To"] = ', '.join(recipients)
+# def send_email(subject, html_body, sender, recipients, smtp_server, smtp_port, username, password):
+#     # Create a multipart message
+#     message = MIMEMultipart()
+#     message["Subject"] = subject
+#     message["From"] = sender
+#     message["To"] = ', '.join(recipients)
 
-    # Add the body of the email as HTML
-    message.attach(MIMEText(html_body, "html"))
+#     # Add the body of the email as HTML
+#     message.attach(MIMEText(html_body, "html"))
 
-    # Connect to the SMTP server
-    with smtplib.SMTP(smtp_server, smtp_port) as server:
-        server.starttls()
-        server.login(username, password)
+#     # Connect to the SMTP server
+#     with smtplib.SMTP(smtp_server, smtp_port) as server:
+#         server.starttls()
+#         server.login(username, password)
 
-        # Send the email
-        server.send_message(message)
+#         # Send the email
+#         server.send_message(message)
 
 
 def appointment(request):
+    services = Services_by_cat.objects.all().order_by('id')
+    context = {
+        'services' : services,
+    }
     if request.method == 'POST':
         input_name = request.POST.get('input_name')
         mobile_number = request.POST.get('mobile_number')
@@ -54,27 +58,26 @@ def appointment(request):
         form_data = Form(input_name=input_name, mobile_number=mobile_number, date=date, email=email)
         form_data.save()
         appointments = Form.objects.latest('id')
-        subject = "You have received a new appointment..."
-        sender = "avyaktex@gmail.com"
-        recipients = ["dhrumilsheth1512@gmail.com", email]
-        smtp_server = "smtp.gmail.com"
-        smtp_port = 587
-        username = "avyaktex@gmail.com"
-        password = "lcxkeugwmogaactc"
+        # subject = "You have received a new appointment..."
+        # sender = "avyaktex@gmail.com"
+        # recipients = ["dhrumilsheth1512@gmail.com", email]
+        # smtp_server = "smtp.gmail.com"
+        # smtp_port = 587
+        # username = "avyaktex@gmail.com"
+        # password = "lcxkeugwmogaactc"
 
-        # Render the HTML template with the provided context data
-        html_content = render_to_string('mail_temp.html', {'appointment': form_data})
+        # # Render the HTML template with the provided context data
+        # html_content = render_to_string('mail_temp.html', {'appointment': form_data})
 
-        # Send the email
-        send_email(subject, html_content, sender, recipients, smtp_server, smtp_port, username, password)
+        # # Send the email
+        # send_email(subject, html_content, sender, recipients, smtp_server, smtp_port, username, password)
 
         context = {
             'appointment': form_data,
             'appointment' : appointments,
         }
         return render(request, 'success.html', context)
-    else:
-        return render(request, 'appointment.html')
+    return render(request, 'appointment.html', context)
     
 def dashboard(request):
     search_name = request.GET.get('input_name')

@@ -18,6 +18,49 @@
         <link rel="stylesheet" href="/static/css/default.css">
         <link rel="stylesheet" href="/static/css/style.css">
         <link rel="stylesheet" href="/static/css/responsive.css">
+        <style>
+            .appointment-table {
+                width: 75%;
+                margin-left: 150px;
+                border-collapse: collapse;
+            }
+        
+            .appointment-table th,
+            .appointment-table td {
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid black;
+                border-right: 1px solid black;
+            }
+        
+            .appointment-table th {
+                color: white;
+                background-color: #884cd2;
+                border-top: 1px solid black;
+            }
+        
+            .appointment-table td {
+                color: black;
+                {% comment %} color: white; {% endcomment %}
+                {% comment %} background-color: #d63384; {% endcomment %}
+                background-color: white;
+                border-top: 1px solid black;
+            }
+        
+            .appointment-table tbody tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+        
+            .appointment-table tbody td:last-child {
+                border-right: none;
+            }
+
+            input[type="checkbox"] {
+                width: 12px;
+                height: 12px;
+                cursor: pointer;
+              }        
+        </style>
     </head>
     <body>
 <!-- header -->
@@ -54,71 +97,126 @@
       </header>
 <!-- header-end --> 
 <!-- booking-area -->
-        <section id="booking" class="booking-area p-relative pt-120 pb-120" style="background-size: cover; background-position: center center; background-repeat: no-repeat;">
-            <div class="container">
-                <div class="row align-items-center">
+
+<section id="booking" class="booking-area p-relative pt-120 pb-120" style="background-size: cover; background-position: center center; background-repeat: no-repeat;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="contact-bg">
+            <div class="section-title center-align">
+                <br>
+                <br>
+                <br>
+                <h5>Get In Touch</h5>
+                <h2>
+                  Get Appointment
+                </h2>
+                <p></p>
+            </div>  
+            <form method="post" action="{% url 'appointment' %}" class="contact-form mt-30">
+                {% csrf_token %}
+                <div class="row">
                     <div class="col-lg-6">
-                        <div class="contact-bg">
-                    <div class="section-title center-align">
-                        <br>
-                        <br>
-                        <br>
-                        <h5>Get In Touch</h5>
-                        <h2>
-                          Get Appointment
-                        </h2>
-                        <p></p>
-                    </div>  
-                    <form method="post" action="{% url 'appointment' %}" class="contact-form mt-30">
-                        {% csrf_token %}
-                        <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="contact-field p-relative c-name mb-20">
-                                                <input type="text" id="input_name" name="input_name" placeholder="Enter Name" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="contact-field p-relative c-name mb-20">
-                                                <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">                               
-                                            <div class="contact-field p-relative c-subject mb-20">
-                                                <input type="tel" id="mobile_number" name="mobile_number" placeholder="Phone number" required pattern="[0-9]{10}" >
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">                               
-                                            <div class="contact-field p-relative c-subject mb-20">
-                                                <input type="date" id="date" name="date" placeholder="Select Date" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <div class="slider-btn">
-                                                <button type="submit" class="btn">Book Appointment</button>
-                                            </div>
-                                            <div class="slider-btn">
-                                                <button type="reset" class="btn">Reset</button>
-                                            </div>
-                                        </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-<div class="col-lg-6">
-    <div class="opening-time">
-        <div class="open-img">
-            <img src="/static/img/bg/open-box-img.png" alt="icon01">
-        </div>
-        <h3>Open Hours</h3>
-        <div class="text">
-            <div class="left-text">Everyday:</div>
-            <div class="right-text">09:30 am – 09:00 pm</div>
+                                    <div class="contact-field p-relative c-name mb-20">
+                                        <input type="text" id="input_name" name="input_name" placeholder="Enter Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="contact-field p-relative c-name mb-20">
+                                        <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">                               
+                                    <div class="contact-field p-relative c-subject mb-20">
+                                        <input type="tel" id="mobile_number" name="mobile_number" placeholder="Phone number" required pattern="[0-9]{10}" >
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">                               
+                                    <div class="contact-field p-relative c-subject mb-20">
+                                        <input type="date" id="date" name="date" placeholder="Select Date" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="slider-btn">
+                                        <button type="submit" class="btn">Book Appointment</button>
+                                    </div>
+                                    <div class="slider-btn">
+                                        <button type="reset" class="btn">Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+            </form>
         </div>
     </div>
+    <div class="col-lg-6">
+        <div class="opening-time">
+            <div class="open-img">
+                <img src="/static/img/bg/open-box-img.png" alt="icon01">
 </div>
-</div>
+<h3>Open Hours</h3>
+<div class="text">
+    <div class="left-text">Everyday:</div>
+    <div class="right-text">09:30 am – 09:00 pm</div>
 </div>
 </section>
+<section>
+    <center><div class="section-title center-align">
+<h5>Services For Men</h5>
+    </div></center>
+                <table border=1 class="appointment-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Men' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="checkbox" value="{{service.id}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <br>
+                <br>
+                <br>
+                <center><div class="section-title center-align">
+                <h5>Services For Women</h5>
+                </div></center>
+                <table border=1 class="appointment-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="checkbox" value="{{service.id}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </section>
+            <br>
+            <br>
+            <br>
 <!-- booking-area-end -->
 <!-- footer -->
 <footer class="footer-bg footer-p pt-90" style="background-color: #252525; background-image: url(img/bg/footer-bg.png);">
@@ -128,16 +226,16 @@
                 <div class="col-xl-4 col-lg-4 col-sm-6">
                     <div class="footer-widget mb-30">
                         <!-- <div class="f-widget-title mb-40"> -->
-                        <div class="logo">
-                          <a href="#"><img src="/static/img/logo/logo1.png" alt="logo" width="100%"></a>
+                            <div class="logo">
+                                <a href="#"><img src="/static/img/logo/logo1.png" alt="logo" width="100%"></a>
                         </div>
                         <div class="footer-social mt-10">
-                        <p>Have a look on our social media accounts... </p>
+                            <p>Have a look on our social media accounts... </p>
                         <a href="https://www.facebook.com/Bellitathesalon/"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/pradeep_bellita_the_salon/"><i class="fab fa-instagram"></i></a>
                         <a href="https://mail.google.com/mail/u/0/?fs=1&to=bellitathesalon@gmail.com&tf=cm"><i class="fa fa-envelope"></i></a>    
                         <a href="tel:+919904455668"><i class="fas fa-phone-alt"></i></a>                                  
-                        </div> 
+                    </div> 
                         <div class="footer-link">
                             <p></p>
                         </div>
@@ -177,13 +275,13 @@
         </div>
         <div class="row align-items-center copyright-wrap">
             <div class="col-lg-6">
-                  <div class="copy-text">
-                         Copyright &copy; 2023 <a href="/index">Bellita</a>. All rights reserved.       
-                  </div>
+                <div class="copy-text">
+                    Copyright &copy; 2023 <a href="/index">Bellita</a>. All rights reserved.       
+                </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="copay-contact">                                    
-                           <ul>
+                        <ul>
                                 <li>
                                         <div class="c-contact">
                                             <div class="icon">
@@ -194,7 +292,7 @@
                                                 <p>09:30 AM - 09:00 PM</p>
                                             </div>
                                         </div>
-                                </li>
+                                    </li>
                                <li>
                                 <a href="tel:+919904455668">
                                     <div class="c-contact">   
@@ -207,7 +305,7 @@
                                         </div>
                                     </div>
                                 </a>
-                               </li>
+                            </li>
                             </ul>
                         </div>    
                 </div>
