@@ -4,6 +4,8 @@ class Form(models.Model):
     input_name = models.CharField(max_length=255)
     mobile_number = models.CharField(max_length=10)
     date = models.DateField(null=True)
+    email = models.EmailField(max_length=255, default='')
+    
 
     def __str__(self):
         return self.input_name

@@ -1,6 +1,3 @@
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 from django.contrib.auth.decorators import login_required
 from .models import Form
 from django.shortcuts import render
@@ -16,9 +13,6 @@ def restricted_view(request):
 def index(request):
     return render(request, 'index.html')
 
-def services(request):
-    return render(request, 'services.html')
-
 def success(request):
     appointments = Form.objects.latest()
     context = {
@@ -26,41 +20,14 @@ def success(request):
     }
     return render(request, 'success.html', context)
 
-
-def send_email(subject, body, sender, recipients, smtp_server, smtp_port, username, password):
-    # Create a multipart message
-    message = MIMEMultipart()
-    message["Subject"] = subject
-    message["From"] = sender
-    message["To"] = ', '.join(recipients)
-
-    # Add the body of the email as plain text
-    message.attach(MIMEText(body, "plain"))
-
-    # Connect to the SMTP server
-    with smtplib.SMTP(smtp_server, smtp_port) as server:
-        server.starttls()
-        server.login(username, password)
-
-        # Send the email
-        server.send_message(message)
-
 def appointment(request):
     if request.method == 'POST':
         input_name = request.POST.get('input_name')
         mobile_number = request.POST.get('mobile_number')
         date = request.POST.get('date')
-        form_data = Form(input_name=input_name, mobile_number=mobile_number, date=date)
+        email = request.POST.get('email')
+        form_data = Form(input_name=input_name, mobile_number=mobile_number, date=date, email=email)
         form_data.save()
-        subject = "You have recieved a new appointment..."
-        body = "A new appointment has been booked by " + input_name + " on " + date + ". Mobile number of the client is " + mobile_number + "."
-        sender = "avyaktex@gmail.com"
-        recipients = ["dhrumilsheth1512@gmail.com", "parasm12345@gmail.com"]
-        smtp_server = "smtp.gmail.com"
-        smtp_port = 587
-        username = "avyaktex@gmail.com"
-        password = "tooxbsopcagtjfor"
-        send_email(subject, body, sender, recipients, smtp_server, smtp_port, username, password)
         appointments = Form.objects.latest('id')
         context = {
             'appointment' : appointments,
