@@ -63,7 +63,7 @@ def appointment(request):
         password = "lcxkeugwmogaactc"
 
         # Render the HTML template with the provided context data
-        html_content = render_to_string('success.html', {'appointment': form_data})
+        html_content = render_to_string('mail_temp.html', {'appointment': form_data})
 
         # Send the email
         send_email(subject, html_content, sender, recipients, smtp_server, smtp_port, username, password)
