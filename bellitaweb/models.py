@@ -5,7 +5,7 @@ class Form(models.Model):
     mobile_number = models.CharField(max_length=10)
     date = models.DateField(null=True)
     email = models.EmailField(max_length=255, default='')
-    
+    selected_services = models.CharField(max_length=255, default='')
 
     def __str__(self):
         return self.input_name

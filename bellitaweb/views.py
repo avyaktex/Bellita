@@ -74,7 +74,8 @@ def appointment(request):
         mobile_number = request.POST.get('mobile_number')
         date = request.POST.get('date')
         email = request.POST.get('email')
-        form_data = Form(input_name=input_name, mobile_number=mobile_number, date=date, email=email)
+        selected_services = request.POST.getlist('selectedServices')
+        form_data = Form(input_name=input_name, mobile_number=mobile_number, date=date, email=email, selected_services=selected_services)
         form_data.save()
         appointments = Form.objects.latest('id')
         subject = "You have received a new appointment..."
