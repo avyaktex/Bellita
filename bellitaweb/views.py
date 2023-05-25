@@ -3,12 +3,12 @@ from .models import Form, Services_by_cat
 from django.shortcuts import render
 from django.db.models import Q
 from django.core.paginator import Paginator
-# from django.template.loader import render_to_string
-# from premailer import Premailer
-# from django.core.mail import EmailMessage
-# from email.mime.multipart import MIMEMultipart
-# from email.mime.text import MIMEText
-# import smtplib
+from django.template.loader import render_to_string
+from premailer import Premailer
+from django.core.mail import EmailMessage
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import smtplib
 
 # Create your views here.
 @login_required
@@ -26,23 +26,42 @@ def success(request):
     return render(request, 'success.html', context)
 
 
-# def send_email(subject, html_body, sender, recipients, smtp_server, smtp_port, username, password):
-#     # Create a multipart message
-#     message = MIMEMultipart()
-#     message["Subject"] = subject
-#     message["From"] = sender
-#     message["To"] = ', '.join(recipients)
+def send_email_user(subject, html_body, sender, recipients, smtp_server, smtp_port, username, password):
+    # Create a multipart message
+    message = MIMEMultipart()
+    message["Subject"] = subject
+    message["From"] = sender
+    message["To"] = ', '.join(recipients)
 
-#     # Add the body of the email as HTML
-#     message.attach(MIMEText(html_body, "html"))
+    # Add the body of the email as HTML
+    message.attach(MIMEText(html_body, "html"))
 
-#     # Connect to the SMTP server
-#     with smtplib.SMTP(smtp_server, smtp_port) as server:
-#         server.starttls()
-#         server.login(username, password)
+    # Connect to the SMTP server
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+        server.starttls()
+        server.login(username, password)
 
-#         # Send the email
-#         server.send_message(message)
+        # Send the email
+        server.send_message(message)
+
+
+def send_email_admin(subject, html_body, sender, recipients, smtp_server, smtp_port, username, password):
+    # Create a multipart message
+    message = MIMEMultipart()
+    message["Subject"] = subject
+    message["From"] = sender
+    message["To"] = ', '.join(recipients)
+
+    # Add the body of the email as HTML
+    message.attach(MIMEText(html_body, "html"))
+
+    # Connect to the SMTP server
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+        server.starttls()
+        server.login(username, password)
+
+        # Send the email
+        server.send_message(message)
 
 
 def appointment(request):
@@ -58,19 +77,22 @@ def appointment(request):
         form_data = Form(input_name=input_name, mobile_number=mobile_number, date=date, email=email)
         form_data.save()
         appointments = Form.objects.latest('id')
-        # subject = "You have received a new appointment..."
-        # sender = "avyaktex@gmail.com"
-        # recipients = ["dhrumilsheth1512@gmail.com", email]
-        # smtp_server = "smtp.gmail.com"
-        # smtp_port = 587
-        # username = "avyaktex@gmail.com"
-        # password = "lcxkeugwmogaactc"
+        subject = "You have received a new appointment..."
+        sender = "avyaktex@gmail.com"
+        recipient_user = [email]
+        recipient_admin = ['parasm12345@gmail.com','dhrumilsheth1512@gmail.com']
+        smtp_server = "smtp.gmail.com"
+        smtp_port = 587
+        username = "avyaktex@gmail.com"
+        password = "lcxkeugwmogaactc"
 
-        # # Render the HTML template with the provided context data
-        # html_content = render_to_string('mail_temp.html', {'appointment': form_data})
+        # Render the HTML template with the provided context data
+        html_content_user = render_to_string('mail_temp_user.html', {'appointment': form_data})
+        html_content_admin = render_to_string('mail_temp_admin.html', {'appointment': form_data})
 
-        # # Send the email
-        # send_email(subject, html_content, sender, recipients, smtp_server, smtp_port, username, password)
+        # Send the email
+        send_email_user(subject, html_content_user, sender, recipient_user, smtp_server, smtp_port, username, password)
+        send_email_admin(subject, html_content_admin, sender, recipient_admin, smtp_server, smtp_port, username, password)
 
         context = {
             'appointment': form_data,
