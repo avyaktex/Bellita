@@ -111,14 +111,18 @@ def dashboard(request):
     appointments = Form.objects.all().order_by('-id')
     
     if delete_record:
-        if search_name and (start_date or end_date):
-            appointments = Form.objects.filter(
-                Q(input_name__icontains=search_name),
-                Q(date__range=[start_date, end_date])
-            ).order_by('-id')
-            appointments.delete()  # Delete the filtered records
-        else:
-            Form.objects.all().delete()  # Delete all records
+        appointments = Form.objects.filter(
+            id__icontains=delete_record
+        ).order_by('-id')
+        appointments.delete()
+        # if search_name and (start_date or end_date):
+        #     appointments = Form.objects.filter(
+        #         Q(input_name__icontains=search_name),
+        #         Q(date__range=[start_date, end_date])
+        #     ).order_by('-id')
+        #     appointments.delete()  # Delete the filtered records
+        # else:
+        #     Form.objects.all().delete()  # Delete all records
 
     if search_name and (start_date or end_date):
         appointments = Form.objects.filter(
