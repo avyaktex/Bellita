@@ -1,34 +1,57 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
+
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Bellita : The Salon</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Bellita : The Salon</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-    <body>
-           <center><section id="booking" class="booking-area p-relative pt-120 pb-120" style="background: url(https://i.ibb.co/j3mXM2g/ap-bg.png);">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-2 col-lg-2">
-                        <div class="logo">
-                            <img src="https://i.ibb.co/rp1Cstz/logo.png" alt="logo" width="25%"></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="contact-bg">
-                            <div class="section-title center-align">
-                                <h4>
-                                    You have recived new Appointment
-                                </h4>
-                                    <p><h3>Customer name:{{appointment.input_name}}</h3> On date <h3>{{appointment.date}}</h3> Has Been Booked Successfully!</p>
-                                    <p><h3>Welcome to Bellita The Salon.</h3></p>
-                            </div>                              
-                        </div>    
-                    </div>
-                </div>
-            </div>
-        </section></center>
-    </body>
+
+<body style="margin: 0; padding: 0;">
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td align="center" bgcolor="#ffffff" style="padding: 20px 0;">
+                <table cellpadding="0" cellspacing="0" border="0" width="600" style="max-width: 600px;">
+                    <tr>
+                        <td align="center" bgcolor="#ffffff" style="padding: 40px 20px;">
+                            <img src="https://i.ibb.co/rp1Cstz/logo.png" alt="logo" width="150" style="display: block;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#ffffff" style="padding: 40px 20px;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td align="center" style="font-size: 24px; font-weight: bold;">
+                                        You have received a new appointment
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" style="padding: 20px 0;">
+                                        <p style="font-size: 18px; font-weight: bold;">
+                                            Customer name: <span style="font-weight: normal;">{{appointment.input_name}}</span>
+                                        </p>
+                                        <p style="font-size: 18px; font-weight: bold;">
+                                            On date: <span style="font-weight: normal;">{{appointment.date}}</span>
+                                        </p>
+                                        <p style="font-size: 18px;">
+                                            Your appointment has been booked successfully!
+                                        </p>
+                                        <p style="font-size: 18px;">
+                                            Welcome to Bellita The Salon.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
 </html>
