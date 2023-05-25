@@ -146,8 +146,8 @@
                                 </div>
                                 <div class="col-lg-6">                               
                                     <center><div class="contact-field p-relative c-subject mb-20">
-                                        <button id="toggleButtonMen" class="btn" onclick="toggleTable('men')">Men</button>
-                                        <button id="toggleButtonWomen" class="btn" onclick="toggleTable('women')">Women</button>
+                                        <p id="toggleButtonMen" class="btn" onclick="toggleTable('men')">Men</p>
+                                        <p id="toggleButtonWomen" class="btn" onclick="toggleTable('women')">Women</p>
                                         <br>
                                         <table id="men" border=1 class="appointment-table" style="display: none;">
                                             <thead>
@@ -171,7 +171,6 @@
                                                 {% endfor %}
                                             </tbody>
                                         </table>
-                                        <br>
                                         <table id="women" border=1 class="appointment-table" style="display: none;">
                                             <thead>
                                                 <tr>
@@ -320,42 +319,27 @@
 <!-- JS here -->
 <script>
     function toggleTable(tableId) {
-        var table = document.getElementById(tableId);
-        var button = document.getElementById(`toggleButton${tableId.charAt(0).toUpperCase() + tableId.slice(1)}`);
-      
-        if (table.style.display === "none") {
-          table.style.display = "table"; // Show the table
-          button.textContent = tableId.charAt(0).toUpperCase() + tableId.slice(1);
-        } else {
-          table.style.display = "none"; // Hide the table
-          button.textContent = tableId.charAt(0).toUpperCase() + tableId.slice(1);
-        }
-      }
-{% comment %}       
-    function toggleMen() {
-        var table = document.getElementById("men");
-        var button = document.getElementById("toggleButtonMen");
+  var table = document.getElementById(tableId);
+  var button = document.getElementById(`toggleButton${tableId.charAt(0).toUpperCase() + tableId.slice(1)}`);
+  
+  // Get the opposite table
+  var oppositeTableId = (tableId === "men") ? "women" : "men";
+  var oppositeTable = document.getElementById(oppositeTableId);
+  
+  // Get the opposite button
+  var oppositeButton = document.getElementById(`toggleButton${oppositeTableId.charAt(0).toUpperCase() + oppositeTableId.slice(1)}`);
+  
+  if (table.style.display === "none") {
+    table.style.display = "table"; // Show the table
+    button.textContent = tableId.charAt(0).toUpperCase() + tableId.slice(1);
     
-        if (table.style.display === "none") {
-          table.style.display = "table"; // Show the table
-          button.textContent = "Men";
-        } else {
-          table.style.display = "none"; // Hide the table
-          button.textContent = "Men";
-        }
-      }
-    function toggleWomen() {
-        var table = document.getElementById("women");
-        var button = document.getElementById("toggleButtonWomen");
-    
-        if (table.style.display === "none") {
-          table.style.display = "table"; // Show the table
-          button.textContent = "Women";
-        } else {
-          table.style.display = "none"; // Hide the table
-          button.textContent = "Women";
-        }
-      } {% endcomment %}
+    oppositeTable.style.display = "none"; // Hide the opposite table
+    oppositeButton.textContent = oppositeTableId.charAt(0).toUpperCase() + oppositeTableId.slice(1);
+  } else {
+    table.style.display = "none"; // Hide the table
+    button.textContent = tableId.charAt(0).toUpperCase() + tableId.slice(1);
+  }
+}
 </script>
 <script src="/static/js/vendor/modernizr-3.5.0.min.js"></script>
 <script src="/static/js/vendor/jquery-3.6.0.min.js"></script>
