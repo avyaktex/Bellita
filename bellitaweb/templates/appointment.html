@@ -149,7 +149,6 @@
                     </div>
                 </div>
                 <center><div id="men-services" class="contact-field p-relative c-subject mb-20" style="display:none;">
-                    <p id="toggleButton" class="btn" onclick="toggleTable('MAll')">All</p>
                     <p id="toggleButton" class="btn" onclick="toggleTable('MHair')">Hair</p>
                     <p id="toggleButton" class="btn" onclick="toggleTable('MMask')">Mask</p>
                     <p id="toggleButton" class="btn" onclick="toggleTable('Care')">Care</p>
@@ -164,7 +163,6 @@
                     <p id="toggleButton" class="btn" onclick="toggleTable('Texture Service')">Texture Service</p>
                 </div>
                 <div id="women-services" class="contact-field p-relative c-subject mb-20" style="display:none;">
-                    <p id="toggleButton" class="btn" onclick="toggleTable('WAll')">All</p>
                     <p id="toggleButton" class="btn" onclick="toggleTable('WHair')">Hair</p>
                     <p id="toggleButton" class="btn" onclick="toggleTable('WMask')">Mask</p>
                     <p id="toggleButton" class="btn" onclick="toggleTable('WD-tan')">D-tan</p>
@@ -187,7 +185,7 @@
                     <p id="toggleButton" class="btn" onclick="toggleTable('Advanced Treatments')">Advanced Treatments</p>
                 </div></center>                                 
                 <br>
-                <center><table id="MAll" border=1 class="appointment-table" style="display: none;">
+                {% comment %} <table id="men" border=1 class="appointment-table" style="display: none;">
                     <thead>
                     <tr>
                         <th>Name</th>
@@ -208,8 +206,30 @@
                         {%endif%}
                         {% endfor %}
                     </tbody>
-                </table>
-                <table id="MHair" border=1 class="appointment-table" style="display: none;">
+                </table> {% endcomment %}
+                {% comment %} <table id="women" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table> {% endcomment %}
+                <center><table id="MHair" border=1 class="appointment-table" style="display: none;">
                     <thead>
                     <tr>
                         <th>Name</th>
@@ -463,28 +483,6 @@
                     <tbody>
                         {% for service in services %}
                         {% if service.gender == 'Men' and service.category == 'Texture Service' %}
-                        <tr>
-                            <td>{{ service.name }}</td>
-                            <td>{{ service.price }}</td>
-                            <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
-                        </tr>
-                        {%endif%}
-                        {% endfor %}
-                    </tbody>
-                </table>
-                <table id="WAll" border=1 class="appointment-table" style="display: none;">
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Service Time</th>
-                        <th>Select</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        {% for service in services %}
-                        {% if service.gender == 'Women' %}
                         <tr>
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
