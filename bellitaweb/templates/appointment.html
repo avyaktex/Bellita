@@ -185,57 +185,13 @@
                     <p id="toggleButton" class="btn" onclick="toggleTable('Advanced Treatments')">Advanced Treatments</p>
                 </div></center>                                 
                 <br>
-                {% comment %} <table id="men" border=1 class="appointment-table" style="display: none;">
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Service Time</th>
-                        <th>Select</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        {% for service in services %}
-                        {% if service.gender == 'Men' %}
-                        <tr>
-                            <td>{{ service.name }}</td>
-                            <td>{{ service.price }}</td>
-                            <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
-                        </tr>
-                        {%endif%}
-                        {% endfor %}
-                    </tbody>
-                </table> {% endcomment %}
-                {% comment %} <table id="women" border=1 class="appointment-table" style="display: none;">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Service Time</th>
-                            <th>Select</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for service in services %}
-                        {% if service.gender == 'Women' %}
-                        <tr>
-                            <td>{{ service.name }}</td>
-                            <td>{{ service.price }}</td>
-                            <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
-                        </tr>
-                        {%endif%}
-                        {% endfor %}
-                    </tbody>
-                </table> {% endcomment %}
                 <center><table id="MHair" border=1 class="appointment-table" style="display: none;">
                     <thead>
                     <tr>
                         <th>Name</th>
                         <th>Price</th>
                         <th>Service Time</th>
-                        <th>Select</th>
+                        <th>Your Cart</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -245,7 +201,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -257,7 +213,7 @@
                         <th>Name</th>
                         <th>Price</th>
                         <th>Service Time</th>
-                        <th>Select</th>
+                        <th>Your Cart</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -267,7 +223,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -279,7 +235,7 @@
                         <th>Name</th>
                         <th>Price</th>
                         <th>Service Time</th>
-                        <th>Select</th>
+                        <th>Your Cart</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -289,7 +245,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -301,7 +257,7 @@
                         <th>Name</th>
                         <th>Price</th>
                         <th>Service Time</th>
-                        <th>Select</th>
+                        <th>Your Cart</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -311,7 +267,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -323,7 +279,7 @@
                         <th>Name</th>
                         <th>Price</th>
                         <th>Service Time</th>
-                        <th>Select</th>
+                        <th>Your Cart</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -333,7 +289,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -345,7 +301,7 @@
                         <th>Name</th>
                         <th>Price</th>
                         <th>Service Time</th>
-                        <th>Select</th>
+                        <th>Your Cart</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -355,7 +311,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -367,7 +323,7 @@
                         <th>Name</th>
                         <th>Price</th>
                         <th>Service Time</th>
-                        <th>Select</th>
+                        <th>Your Cart</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -377,7 +333,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -389,7 +345,7 @@
                         <th>Name</th>
                         <th>Price</th>
                         <th>Service Time</th>
-                        <th>Select</th>
+                        <th>Your Cart</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -399,7 +355,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -411,7 +367,7 @@
                         <th>Name</th>
                         <th>Price</th>
                         <th>Service Time</th>
-                        <th>Select</th>
+                        <th>Your Cart</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -421,7 +377,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -433,7 +389,7 @@
                         <th>Name</th>
                         <th>Price</th>
                         <th>Service Time</th>
-                        <th>Select</th>
+                        <th>Your Cart</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -443,7 +399,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -455,7 +411,7 @@
                         <th>Name</th>
                         <th>Price</th>
                         <th>Service Time</th>
-                        <th>Select</th>
+                        <th>Your Cart</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -465,7 +421,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -477,7 +433,7 @@
                         <th>Name</th>
                         <th>Price</th>
                         <th>Service Time</th>
-                        <th>Select</th>
+                        <th>Your Cart</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -487,7 +443,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -499,7 +455,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -509,7 +465,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -521,7 +477,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -531,7 +487,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -543,7 +499,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -553,7 +509,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -565,7 +521,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -575,7 +531,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -587,7 +543,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -597,7 +553,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -609,7 +565,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -619,7 +575,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -631,7 +587,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -641,7 +597,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -653,7 +609,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -663,7 +619,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -675,7 +631,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -685,7 +641,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -697,7 +653,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -707,7 +663,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -719,7 +675,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -729,7 +685,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -741,7 +697,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -751,7 +707,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -763,7 +719,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -773,7 +729,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -785,7 +741,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -795,7 +751,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -807,7 +763,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -817,7 +773,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -829,7 +785,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -839,7 +795,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -851,7 +807,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -861,7 +817,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -873,7 +829,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -883,7 +839,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -895,7 +851,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -905,7 +861,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
@@ -917,7 +873,7 @@
                             <th>Name</th>
                             <th>Price</th>
                             <th>Service Time</th>
-                            <th>Select</th>
+                            <th>Your Cart</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -927,7 +883,7 @@
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
                             <td>{{ service.service_time}}</td>
-                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Add / Remove</td>
                         </tr>
                         {%endif%}
                         {% endfor %}
