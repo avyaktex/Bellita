@@ -41,8 +41,6 @@
         
             .appointment-table td {
                 color: black;
-                {% comment %} color: white; {% endcomment %}
-                {% comment %} background-color: #d63384; {% endcomment %}
                 background-color: white;
                 border-top: 1px solid black;
             }
@@ -111,7 +109,6 @@
       </header>
 <!-- header-end --> 
 <!-- booking-area -->
-
 <section id="booking" class="booking-area p-relative pt-120 pb-120">
     <div class="container">
         <br>
@@ -122,129 +119,127 @@
                 <h2>Get Appointment</h2>
                     <p></p>
         </div>
-                    <form method="post" action="{% url 'appointment' %}" class="contact-form mt-30">
-                        {% csrf_token %}
-                        <div class="row">
-                            <center><div class="col-lg-6">                               
-                                <div class="contact-field p-relative c-subject mb-20">
-                                    <p id="toggleButtonMen" class="btn" onclick="toggleGender('men-services')">Men</p>
-                                    <p id="toggleButtonWomen" class="btn" onclick="toggleGender('women-services')">Women</p>
-                                </div>
-                            </div></center>
-                            <div class="col-lg-6">
-                                <div class="contact-field p-relative c-name mb-20">
-                                    <input type="text" id="input_name" name="input_name" placeholder="Enter Name" required>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="contact-field p-relative c-name mb-20">
-                                    <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">                               
-                                <div class="contact-field p-relative c-subject mb-20">
-                                    <input type="tel" id="mobile_number" name="mobile_number" placeholder="Phone number" required pattern="[0-9]{10}" >
-                                </div>
-                            </div>
-                            <div class="col-lg-6">                               
-                                <div class="contact-field p-relative c-subject mb-20">
-                                    <input type="date" id="date" name="date" placeholder="Select Date" required>
-                                </div>
-                            </div>
-                            <center><div id="men-services" class="contact-field p-relative c-subject mb-20" style="display:none;">
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Mask</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Care</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">D-tan</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Scalp</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Facial</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Clean up</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Wash</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Color</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Head Massage</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Treatments</p>
-                            </div>
-                            <div id="women-services" class="contact-field p-relative c-subject mb-20" style="display:none;">
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Mask</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">D-tan</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Scalp</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Facial</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Waxing</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Styling</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Make up</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Clean up</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Threading</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Wash</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Color</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Head Massage</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Root Touch Up</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Bleach/Shiner</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Waxing Roll On</p>                                    
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Treatments</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Texture Service</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Protein Treatment</p>                                    
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Texture Treatment</p>
-                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Advanced Treatment</p>
-                            </div></center>                                 
-                            <br>
-                                        <table id="men" border=1 class="appointment-table" style="display: none;">
-                                            <thead>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Price</th>
-                                                <th>Service Time</th>
-                                                <th>Select</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {% for service in services %}
-                                            {% if service.gender == 'Men' %}
-                                            <tr>
-                                                <td>{{ service.name }}</td>
-                                                <td>{{ service.price }}</td>
-                                                <td>{{ service.service_time}}</td>
-                                                <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
-                                            </tr>
-                                            {%endif%}
-                                            {% endfor %}
-                                        </tbody>
-                                    </table>
-                                    <table id="women" border=1 class="appointment-table" style="display: none;">
-                                        <thead>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Price</th>
-                                                <th>Service Time</th>
-                                                <th>Select</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {% for service in services %}
-                                            {% if service.gender == 'Women' %}
-                                            <tr>
-                                                <td>{{ service.name }}</td>
-                                                <td>{{ service.price }}</td>
-                                                <td>{{ service.service_time}}</td>
-                                                <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
-                                            </tr>
-                                            {%endif%}
-                                            {% endfor %}
-                                        </tbody>
-                                    </table>
-                                    <br>
-                                </div>
-                            </div></center>
-                            <center><div class="col-lg-12">
-                                <div class="slider-btn">
-                                    <button type="reset" class="btn">Reset</button>
-                                </div>
-                                <div class="slider-btn">
-                                    <button type="submit" class="btn">Book Appointment</button>
-                                </div>
-                            </div></center>
-                        </div>
-                    </form>
+        <form method="post" action="{% url 'appointment' %}" class="contact-form mt-30">
+            {% csrf_token %}
+            <div class="row">
+                <center><div class="col-lg-6">                               
+                    <div class="contact-field p-relative c-subject mb-20">
+                        <p id="toggleButtonMen" class="btn" onclick="toggleGender('men-services')">Men</p>
+                        <p id="toggleButtonWomen" class="btn" onclick="toggleGender('women-services')">Women</p>
+                    </div>
+                </div></center>
+                <div class="col-lg-6">
+                    <div class="contact-field p-relative c-name mb-20">
+                        <input type="text" id="input_name" name="input_name" placeholder="Enter Name" required>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-field p-relative c-name mb-20">
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                    </div>
+                </div>
+                <div class="col-lg-6">                               
+                    <div class="contact-field p-relative c-subject mb-20">
+                        <input type="tel" id="mobile_number" name="mobile_number" placeholder="Phone number" required pattern="[0-9]{10}" >
+                    </div>
+                </div>
+                <div class="col-lg-6">                               
+                    <div class="contact-field p-relative c-subject mb-20">
+                        <input type="date" id="date" name="date" placeholder="Select Date" required>
+                    </div>
+                </div>
+                <center><div id="men-services" class="contact-field p-relative c-subject mb-20" style="display:none;">
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Mask</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Care</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">D-tan</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Scalp</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Facial</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Clean up</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Wash</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Color</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Head Massage</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Treatments</p>
+                </div>
+                <div id="women-services" class="contact-field p-relative c-subject mb-20" style="display:none;">
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Mask</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">D-tan</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Scalp</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Facial</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Waxing</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Styling</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Make up</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Clean up</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Threading</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Wash</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Color</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Head Massage</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Root Touch Up</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Bleach/Shiner</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Waxing Roll On</p>                                    
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Treatments</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Texture Service</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Protein Treatment</p>                                    
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Texture Treatment</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Advanced Treatment</p>
+                </div></center>                                 
+                <br>
+                <table id="men" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Service Time</th>
+                        <th>Select</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Men' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="women" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <br>
+                <center><div class="col-lg-12">
+                    <div class="slider-btn">
+                        <button type="reset" class="btn">Reset</button>
+                    </div>
+                    <div class="slider-btn">
+                        <button type="submit" class="btn">Book Appointment</button>
+                    </div>
+                </div></center>
+            </div>
+        </form>
     </div>
 </section>
     {% comment %} <div class="col-lg-6">
@@ -265,9 +260,8 @@
             <div class="row justify-content-between">
                 <div class="col-xl-4 col-lg-4 col-sm-6">
                     <div class="footer-widget mb-30">
-                        <!-- <div class="f-widget-title mb-40"> -->
                             <div class="logo">
-                                <a href="#"><img src="/static/img/logo/logo1.png" alt="logo" width="100%"></a>
+                                <a href="/index"><img src="/static/img/logo/logo1.png" alt="logo" width="100%"></a>
                         </div>
                         <div class="footer-social mt-10">
                             <p>Have a look on our social media accounts... </p>
