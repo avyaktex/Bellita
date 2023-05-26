@@ -160,6 +160,7 @@
                     <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Color</p>
                     <p id="toggleButton" class="btn" onclick="toggleTable('')">Head Massage</p>
                     <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Treatments</p>
+                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Texture Service</p>
                 </div>
                 <div id="women-services" class="contact-field p-relative c-subject mb-20" style="display:none;">
                     <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair</p>
@@ -179,13 +180,12 @@
                     <p id="toggleButton" class="btn" onclick="toggleTable('')">Bleach/Shiner</p>
                     <p id="toggleButton" class="btn" onclick="toggleTable('')">Waxing Roll On</p>
                     <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Treatments</p>
-                    <p id="toggleButton" class="btn" onclick="toggleTable('')">Texture Service</p>
                     <p id="toggleButton" class="btn" onclick="toggleTable('')">Protein Treatment</p>
                     <p id="toggleButton" class="btn" onclick="toggleTable('')">Texture Treatment</p>
                     <p id="toggleButton" class="btn" onclick="toggleTable('')">Advanced Treatment</p>
                 </div></center>                                 
                 <br>
-                <table id="men" border=1 class="appointment-table" style="display: none;">
+                {% comment %} <table id="men" border=1 class="appointment-table" style="display: none;">
                     <thead>
                     <tr>
                         <th>Name</th>
@@ -206,8 +206,8 @@
                         {%endif%}
                         {% endfor %}
                     </tbody>
-                </table>
-                <table id="women" border=1 class="appointment-table" style="display: none;">
+                </table> {% endcomment %}
+                {% comment %} <table id="women" border=1 class="appointment-table" style="display: none;">
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -219,6 +219,710 @@
                     <tbody>
                         {% for service in services %}
                         {% if service.gender == 'Women' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table> {% endcomment %}
+                <table id="MHair" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Service Time</th>
+                        <th>Select</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Men' and service.category == 'Hair' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="MMask" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Service Time</th>
+                        <th>Select</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Men' and service.category == 'Mask' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="Care" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Service Time</th>
+                        <th>Select</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Men' and service.category == 'Care' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="MD-tan" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Service Time</th>
+                        <th>Select</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Men' and service.category == 'D-tan' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="MScalp" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Service Time</th>
+                        <th>Select</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Men' and service.category == 'Scalp' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="MFacial" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Service Time</th>
+                        <th>Select</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Men' and service.category == 'Facial' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="MClean up" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Service Time</th>
+                        <th>Select</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Men' and service.category == 'Clean up' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="MHair Wash" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Service Time</th>
+                        <th>Select</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Men' and service.category == 'Hair Wash' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="MHair Color" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Service Time</th>
+                        <th>Select</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Men' and service.category == 'Hair Color' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="MHead Massage" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Service Time</th>
+                        <th>Select</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Men' and service.category == 'Head Massage' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="MHair Treatments" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Service Time</th>
+                        <th>Select</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Men' and service.category == 'Hair Treatments For Men' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="Texture Services" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Service Time</th>
+                        <th>Select</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Men' and service.category == 'Texture Services' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="WHair" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Hair' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="WMask" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Mask' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="WD-tan" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'D-tan' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="WScalp" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Scalp' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="WFacial" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Facial' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="Waxing" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Waxing' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="Styling" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Styling' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="Make up" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Make up' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="WClean up" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Clean up' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="Threading" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Threading' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="WHair Wash" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Hair Wash' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="WHair Color" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Hair Color' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="WHead Massage" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Head Massage' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="Root Touch Up" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Root Touch Up' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="Bleach/Shiner" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Bleach/Shiner' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="Waxing Roll On" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Waxing Roll On' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="WHair Treatments" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Hair Treatments For Women' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="Protein Treatment" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Protein Treatment' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="Texture Treatment" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Texture Treatment' %}
+                        <tr>
+                            <td>{{ service.name }}</td>
+                            <td>{{ service.price }}</td>
+                            <td>{{ service.service_time}}</td>
+                            <td><input type="checkbox" id="checkbox" name="selectedServices" value="{{service.name}}"> Select Service</td>
+                        </tr>
+                        {%endif%}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <table id="Advanced Treatments" border=1 class="appointment-table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Service Time</th>
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for service in services %}
+                        {% if service.gender == 'Women' and service.category == 'Advanced Treatments' %}
                         <tr>
                             <td>{{ service.name }}</td>
                             <td>{{ service.price }}</td>
