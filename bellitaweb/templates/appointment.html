@@ -125,6 +125,12 @@
                     <form method="post" action="{% url 'appointment' %}" class="contact-form mt-30">
                         {% csrf_token %}
                         <div class="row">
+                            <center><div class="col-lg-6">                               
+                                <div class="contact-field p-relative c-subject mb-20">
+                                    <p id="toggleButtonMen" class="btn" onclick="toggleGender('men-services')">Men</p>
+                                    <p id="toggleButtonWomen" class="btn" onclick="toggleGender('women-services')">Women</p>
+                                </div>
+                            </div></center>
                             <div class="col-lg-6">
                                 <div class="contact-field p-relative c-name mb-20">
                                     <input type="text" id="input_name" name="input_name" placeholder="Enter Name" required>
@@ -145,48 +151,43 @@
                                     <input type="date" id="date" name="date" placeholder="Select Date" required>
                                 </div>
                             </div>
-                            <center><div class="col-lg-6">                               
-                                <div class="contact-field p-relative c-subject mb-20">
-                                    <p id="toggleButtonMen" class="btn" onclick="toggleTable('men-services')">Men</p>
-                                    <p id="toggleButtonWomen" class="btn" onclick="toggleTable('women-services')">Women</p>
-                                    <br>
-                                    <div id="men-services" class="contact-field p-relative c-subject mb-20" style="display:none;">
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Mask</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Care</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">D-tan</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Scalp</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Facial</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Clean up</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Wash</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Color</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Head Massage</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Treatments</p>
-                                    </div>
-                                    <div id="women-services" class="contact-field p-relative c-subject mb-20" style="display:none;">
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Mask</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">D-tan</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Scalp</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Facial</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Waxing</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Styling</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Make up</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Clean up</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Threading</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Wash</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Color</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Head Massage</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Bleach/Shiner</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Root Touch Up</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Waxing Roll On</p>                                    
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Texture Service</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Treatments</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Texture Treatment</p>
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Protein Treatment</p>                                    
-                                        <p id="toggleButton" class="btn" onclick="toggleTable('')">Advanced Treatment</p>
-                                    </div>                                   
-                                    <br>
+                            <center><div id="men-services" class="contact-field p-relative c-subject mb-20" style="display:none;">
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Mask</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Care</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">D-tan</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Scalp</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Facial</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Clean up</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Wash</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Color</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Head Massage</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Treatments</p>
+                            </div>
+                            <div id="women-services" class="contact-field p-relative c-subject mb-20" style="display:none;">
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Mask</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">D-tan</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Scalp</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Facial</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Waxing</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Styling</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Make up</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Clean up</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Threading</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Wash</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Color</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Head Massage</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Root Touch Up</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Bleach/Shiner</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Waxing Roll On</p>                                    
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Hair Treatments</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Texture Service</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Protein Treatment</p>                                    
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Texture Treatment</p>
+                                <p id="toggleButton" class="btn" onclick="toggleTable('')">Advanced Treatment</p>
+                            </div></center>                                 
+                            <br>
                                         <table id="men" border=1 class="appointment-table" style="display: none;">
                                             <thead>
                                             <tr>
@@ -236,10 +237,10 @@
                             </div></center>
                             <center><div class="col-lg-12">
                                 <div class="slider-btn">
-                                    <button type="submit" class="btn">Book Appointment</button>
+                                    <button type="reset" class="btn">Reset</button>
                                 </div>
                                 <div class="slider-btn">
-                                    <button type="reset" class="btn">Reset</button>
+                                    <button type="submit" class="btn">Book Appointment</button>
                                 </div>
                             </div></center>
                         </div>
@@ -355,29 +356,25 @@
 <!-- footer-end -->
 <!-- JS here -->
 <script>
-    function toggleTable(tableId) {
-  var table = document.getElementById(tableId);
-  var button = document.getElementById(`toggleButton${tableId.charAt(0).toUpperCase() + tableId.slice(1)}`);
+    function toggleGender(divId) {
+      var table = document.getElementById(divId);
+      var button = document.getElementById(`toggleButton${divId.charAt(0).toUpperCase() + divId.slice(1)}`);
   
-  // Get the opposite table
-  var oppositeTableId = (tableId === "men-services") ? "women-services" : "men-services";
-  var oppositeTable = document.getElementById(oppositeTableId);
+      // Get the opposite div
+      var oppositeDivId = (divId === "men-services") ? "women-services" : "men-services";
+      var oppositeDiv = document.getElementById(oppositeDivId);
   
-  // Get the opposite button
-  var oppositeButton = document.getElementById(`toggleButton${oppositeTableId.charAt(0).toUpperCase() + oppositeTableId.slice(1)}`);
+      if (table.style.display === "none") {
+        oppositeDiv.style.display = "none"; // Hide the opposite div
+        table.style.display = "block"; // Show the div
+        button.textContent = "Hide " + divId.charAt(0).toUpperCase() + divId.slice(1);
   
-  if (table.style.display === "none") {
-    table.style.display = "table"; // Show the table
-    button.textContent = tableId.charAt(0).toUpperCase() + tableId.slice(1);
-    
-    oppositeTable.style.display = "none"; // Hide the opposite table
-    oppositeButton.textContent = oppositeTableId.charAt(0).toUpperCase() + oppositeTableId.slice(1);
-  } else {
-    table.style.display = "none"; // Hide the table
-    button.textContent = tableId.charAt(0).toUpperCase() + tableId.slice(1);
-  }
-}
-</script>
+      } else {
+        table.style.display = "none"; // Hide the div
+        button.textContent = "Show " + divId.charAt(0).toUpperCase() + divId.slice(1);
+      }
+    }
+</script>  
 <script src="/static/js/vendor/modernizr-3.5.0.min.js"></script>
 <script src="/static/js/vendor/jquery-3.6.0.min.js"></script>
 <script src="/static/js/popper.min.js"></script>
