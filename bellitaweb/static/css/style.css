@@ -9228,10 +9228,10 @@ text-align: center;
 }
 .contact-field select {
     width: 100%;
-    border: none;
+    padding: 15px;
     background-color: rgb(255, 255, 255);
     transition: .3s;
-    border-radius: 0;
+    border-radius: 10px;
     border: 1px solid rgb(183, 183, 183);
     height: calc(2.5em + .75rem + 2px);
 }

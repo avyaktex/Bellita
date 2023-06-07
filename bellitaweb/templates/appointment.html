@@ -67,6 +67,26 @@
                 margin-bottom: 5px;
             }
 
+            #time {
+                color:grey;
+            }
+
+            #date {
+                color:grey;
+            }
+
+            #mobile_number {
+                color:grey;
+            }
+
+            #input_name {
+                color:grey;
+            }
+
+            #email {
+                color:grey;
+            }
+
             input[type="checkbox"] {
                 width: 12px;
                 height: 12px;
@@ -130,7 +150,7 @@
                 </div></center>
                 <div class="col-lg-6">
                     <div class="contact-field p-relative c-name mb-20">
-                        <input type="text" id="input_name" name="input_name" placeholder="Enter Name" required>
+                        <input type="text" id="input_name" name="input_name" placeholder="Enter Your Name" required>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -140,7 +160,7 @@
                 </div>
                 <div class="col-lg-6">                               
                     <div class="contact-field p-relative c-subject mb-20">
-                        <input type="tel" id="mobile_number" name="mobile_number" placeholder="Phone number" required pattern="[0-9]{10}" >
+                        <input type="tel" id="mobile_number" name="mobile_number" placeholder=" Enter Your Phone Number" required pattern="[0-9]{10}" >
                     </div>
                 </div>
                 <div class="col-lg-6">                               
@@ -150,7 +170,32 @@
                 </div>
                 <div class="col-lg-6">                               
                     <div class="contact-field p-relative c-subject mb-20">
-                        <input type="time" id="time" name="time" placeholder="Select Time" required>
+                        <select name="time" id="time" required>
+                            <option value="">Select Time Slot</option>
+                            <option value="10:00">10:00</option>
+                            <option value="10:30">10:30</option>
+                            <option value="11:00">11:00</option>
+                            <option value="11:30">11:30</option>
+                            <option value="12:00">12:00</option>
+                            <option value="12:30">12:30</option>
+                            <option value="01:00">01:00</option>
+                            <option value="01:30">01:30</option>
+                            <option value="02:00">02:00</option>
+                            <option value="02:30">02:30</option>
+                            <option value="03:00">03:00</option>
+                            <option value="03:30">03:30</option>
+                            <option value="04:00">04:00</option>
+                            <option value="04:30">04:30</option>
+                            <option value="05:00">05:00</option>
+                            <option value="05:30">05:30</option>
+                            <option value="06:00">06:00</option>
+                            <option value="06:30">06:30</option>
+                            <option value="07:00">07:00</option>
+                            <option value="07:30">07:30</option>
+                            <option value="08:00">08:00</option>
+                            <option value="08:30">08:30</option>
+                            <option value="09:00">09:00</option>
+                        </select>
                     </div>
                 </div>
                 <center><div id="men-services" class="contact-field p-relative c-subject mb-20" style="display:none;">
