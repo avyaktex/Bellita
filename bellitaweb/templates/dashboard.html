@@ -147,7 +147,8 @@
             <th>Mobile Number</th>
             <th>Date</th>
             <th>E-mail</th>
-            <th style="padding:inherit;">Selected Services</th>
+            <th>Selected Services</th>
+            <th>Time</th>
         </tr>
     </thead>
     <tbody>
@@ -159,6 +160,7 @@
             <td>{{ appointment.date }}</td>
             <td>{{ appointment.email }}</td>
             <td>{{ appointment.selected_services }}</td>
+            <td>{{ appointment.time }}</td>
         </tr>
         {% endfor %}
     </tbody>

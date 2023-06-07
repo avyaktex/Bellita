@@ -6,6 +6,7 @@ class Form(models.Model):
     date = models.DateField(null=True)
     email = models.EmailField(max_length=255, default='')
     selected_services = models.CharField(max_length=255, default='')
+    time = models.CharField(max_length=100, default='')
 
     def __str__(self):
         return self.input_name
