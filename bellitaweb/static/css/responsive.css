@@ -1009,9 +1009,7 @@ border: 1px solid #000;
     font-size: 15px;
     font-weight: 600;
 }
-.mean-container .mean-nav ul li li a:first-child,.menu .sub-menu li:last-child {
-  /*  border: none;*/
-}
+
 .menu .sub-menu li, .menu .children li {
     border-bottom: 1px solid rgba(217, 217, 217, 0.5);
 }
@@ -1513,9 +1511,7 @@ margin-top: 210px;
     font-size: 15px;
     font-weight: 600;
 }
-.mean-container .mean-nav ul li li a:first-child,.menu .sub-menu li:last-child {
-    /*border: none;*/
-    }
+
 .menu .sub-menu li, .menu .children li {
     border-bottom: 1px solid rgba(217, 217, 217, 0.5);
 }
@@ -1681,7 +1677,7 @@ display: inline-block;
     width:100% !important;
 }
     .newslater-area img{
-        margin-bottom: 50px;'
+        margin-bottom: 50px;
     }
     .adim-box{
         margin-bottom: 30px;
@@ -1842,10 +1838,6 @@ border: 1px solid #000;
         width: 100%;
     }
     
-    .counter-area {
-   
-}
-
     .single-counter {
    margin-bottom: 30px;
 text-align: center;
@@ -2577,4 +2569,5 @@ padding-top: 60px;
     .button-group button {
     margin: 0 2px;
 
+}
 }
